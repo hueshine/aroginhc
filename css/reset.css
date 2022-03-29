@@ -1,0 +1,67 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #505050;
+    font-family: 'Sintony', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.5s;
+}
+
+a:hover{
+    color: inherit;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+a{
+    font-size: 12px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+h4{
+    font-size: 14px;
+}
+
+h6{
+    font-size: 12px;
+}
+
+p{
+    font-size: 13px;
+}
+
+a.more{
+    color: #202e31;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a.more:hover{
+    color: #60d1d8;
+}
