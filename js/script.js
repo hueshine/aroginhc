@@ -2,7 +2,7 @@ $('.banner-slider').owlCarousel({
     loop: true,
     margin: 0,
     nav: true,
-    autoplay: true,
+    // autoplay: true,
     dots: true,
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',

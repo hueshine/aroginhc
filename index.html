@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Sintony:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" >
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -102,20 +102,37 @@
         <div class="banner-slider owl-carousel">
             <div class="item">
                 <img src="./images/banner1.png" alt="">
+                <div class="banner-image">
+                    <img src="./images/banner1-T.png" alt="" class="upper" style="width: 376px; height: 172px; top: 28%;">
+                    <img src="./images/banner1-TT.png" alt="" class="lower" style="width: 320px; height: 54px; top: 58%;">
+                </div>
             </div>
             <div class="item">
                 <img src="./images/banner2.png" alt="">
+                <div class="banner-image">
+                    <img src="./images/banner2-T.png" alt="" class="upper" style="width: 400px; height: 139px; top:174px ">
+                    <img src="./images/banner2-TT.png" alt="" class="lower" style="width: 340px; height: 102px; top:347px ">
+                </div>
             </div>
             <div class="item">
                 <img src="./images/banner3.png" alt="">
+                <div class="banner-image">
+                    <img src="./images/banner3-T.png" alt="" class="upper" style="width: 400px; height: 100px; top: 200px">
+                    <img src="./images/banner3-TT.png" alt="" class="lower" style="width: 350px; height: 46px; top:327px ">
+                </div>
             </div>
             <div class="item">
                 <img src="./images/banner4.png" alt="">
+                <div class="banner-image shift">
+                    <img src="./images/banner4-T.png" alt="" class="upper" style="width: 400px; height: 44px; top:38% ">
+                    <img src="./images/banner4-TT.png" alt="" class="lower" style="width: 350px; height: 63px; top:54% ">
+                </div>
             </div>
+            <div class="tp-bannertimer"></div>
         </div>
     </div>
 
-    <section class="mnv">
+    <section class="mns">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -166,7 +183,7 @@
                         </div>
                         <div class="content">
                             <div class="desc">
-                                <h4>Mission</h4>
+                                <h4>Specialization</h4>
                                 <div class="info">
                                     <p>We aim to introduce the best quality hair transplantation service here in Nepal. 
                                         We provide preeminent hair transplantation services with the team lead by adept 
@@ -197,7 +214,14 @@
                             professionals supported by experienced entrepreneurs. No hesitation, we call 
                             ourselves as Present & Future of quality medical services.
                         </p>
-                        <a href="" class="more">Read More</a>
+                        <a href="" class="btn-more">
+                            <div class="btn-ins">
+                                Read More 
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>  
             </div>  
@@ -210,51 +234,329 @@
                 <h2>OUR MEDICAL SERVICES <span>& DEPARTMENTS</span></h2>
             </div>
             <div class="general-section">
-                <div class="left-side-bar">
-                    <ul>
-                        <li>Psychiatry</li>
-                        <li>Psychiatry</li>
-                        <li>Psychiatry</li>
-                        <li>Psychiatry</li>
-                        <li>Psychiatry</li>
-                        <li>Psychiatry</li>
-                        <li>Psychiatry</li>
-                    </ul>
-                </div>
-                <div class="main-content">
-                    <div class="left-content">
-                        <div class="title">
-                            <h4>Psychiatry</h4>
+                <ul class="nav left-side-bar">
+                    <li class="tab active">
+                        <a data-toggle="tab" href="#tab-1" aria-expanded="true">
+                            Psychiatry
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a data-toggle="tab" href="#tab-2" aria-expanded="false">
+                            Regular Free Health Camp
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a data-toggle="tab" href="#tab-3" aria-expanded="false">
+                            Dermatology (Skin, Hair & STDs)
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a data-toggle="tab" href="#tab-4" aria-expanded="false">
+                            Geriatric Medicine
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a data-toggle="tab" href="#tab-5" aria-expanded="false">
+                            Pediatrics
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a data-toggle="tab" href="#tab-6" aria-expanded="false">
+                            Travel and Tropical Medicine
+                        </a>
+                    </li>
+                    <li class="tab">
+                        <a data-toggle="tab" href="#tab-7" aria-expanded="false">
+                            Headache Clinic
+                        </a>
+                    </li>
+                </ul>
+                <div class="panel-body ">
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="main-content">
+                                <div class="left-content">
+                                    <div class="title">
+                                        <h4>Psychiatry</h4>
+                                    </div>
+                                    <div class="slogan">
+                                        <p>“A mental illness is not caused by personal weakness and is not “cured” by personal 
+                                            strength. Seeking and accepting help is a sign of strength.”
+                                        </p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Psychiatry is one of the neglected fields in our country where even today we are fighting 
+                                            to establish psychiatric illnesses as medical disorders in true sense. A mental illness 
+                                            is not a character flaw. It is caused by genetic, biological, social and environmental 
+                                            factors. According to a report from the World Health Organization (WHO) one in four 
+                                            people around the world suffer from mental health problems at some point in their lives. 
+                                            With appropriate treatment and support, people with mental illness can have normal life 
+                                            and live successfully in their community. It is high time we took these illnesses seriously.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-content general">
+                                    <div class="image">
+                                        <img src="./images/dr.pawan.png" alt="">
+                                        <span class="curve"></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="desc">
+                                            <h4>DR. PAWAN SHARMA, M.D, AIIMS (NEW DELHI)</h4>
+                                            <div class="info">
+                                                <p>Medical Director, Arogin Healthcare &amp; Research Center</p>
+                                                <p>Consultant Psychiatrist, Arogin Mind Clinic</p>
+                                                <p>Lecturer, Patan Academy of Health Sciences</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="slogan">
-                            <p>“A mental illness is not caused by personal weakness and is not “cured” by personal 
-                                strength. Seeking and accepting help is a sign of strength.”
-                            </p>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="main-content">
+                                <div class="left-content">
+                                    <div class="title">
+                                        <h4>Regular</h4>
+                                    </div>
+                                    <div class="slogan">
+                                        <p>“A mental illness is not caused by personal weakness and is not “cured” by personal 
+                                            strength. Seeking and accepting help is a sign of strength.”
+                                        </p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Psychiatry is one of the neglected fields in our country where even today we are fighting 
+                                            to establish psychiatric illnesses as medical disorders in true sense. A mental illness 
+                                            is not a character flaw. It is caused by genetic, biological, social and environmental 
+                                            factors. According to a report from the World Health Organization (WHO) one in four 
+                                            people around the world suffer from mental health problems at some point in their lives. 
+                                            With appropriate treatment and support, people with mental illness can have normal life 
+                                            and live successfully in their community. It is high time we took these illnesses seriously.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-content general">
+                                    <div class="image">
+                                        <img src="./images/dr.pawan.png" alt="">
+                                        <span class="curve"></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="desc">
+                                            <h4>DR. PAWAN SHARMA, M.D, AIIMS (NEW DELHI)</h4>
+                                            <div class="info">
+                                                <p>Medical Director, Arogin Healthcare &amp; Research Center</p>
+                                                <p>Consultant Psychiatrist, Arogin Mind Clinic</p>
+                                                <p>Lecturer, Patan Academy of Health Sciences</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <p>Psychiatry is one of the neglected fields in our country where even today we are fighting 
-                                to establish psychiatric illnesses as medical disorders in true sense. A mental illness 
-                                is not a character flaw. It is caused by genetic, biological, social and environmental 
-                                factors. According to a report from the World Health Organization (WHO) one in four 
-                                people around the world suffer from mental health problems at some point in their lives. 
-                                With appropriate treatment and support, people with mental illness can have normal life 
-                                and live successfully in their community. It is high time we took these illnesses seriously.
-                            </p>
+                        <div id="tab-3" class="tab-pane">
+                            <div class="main-content">
+                                <div class="left-content">
+                                    <div class="title">
+                                        <h4>Derma</h4>
+                                    </div>
+                                    <div class="slogan">
+                                        <p>“A mental illness is not caused by personal weakness and is not “cured” by personal 
+                                            strength. Seeking and accepting help is a sign of strength.”
+                                        </p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Psychiatry is one of the neglected fields in our country where even today we are fighting 
+                                            to establish psychiatric illnesses as medical disorders in true sense. A mental illness 
+                                            is not a character flaw. It is caused by genetic, biological, social and environmental 
+                                            factors. According to a report from the World Health Organization (WHO) one in four 
+                                            people around the world suffer from mental health problems at some point in their lives. 
+                                            With appropriate treatment and support, people with mental illness can have normal life 
+                                            and live successfully in their community. It is high time we took these illnesses seriously.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-content general">
+                                    <div class="image">
+                                        <img src="./images/dr.pawan.png" alt="">
+                                        <span class="curve"></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="desc">
+                                            <h4>DR. PAWAN SHARMA, M.D, AIIMS (NEW DELHI)</h4>
+                                            <div class="info">
+                                                <p>Medical Director, Arogin Healthcare &amp; Research Center</p>
+                                                <p>Consultant Psychiatrist, Arogin Mind Clinic</p>
+                                                <p>Lecturer, Patan Academy of Health Sciences</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="right-content general">
-                        <div class="image">
-                            <img src="./images/dr.pawan.png" alt="">
-                            <span class="curve"></span>
+                        <div id="tab-4" class="tab-pane">
+                            <div class="main-content">
+                                <div class="left-content">
+                                    <div class="title">
+                                        <h4>Geriatric</h4>
+                                    </div>
+                                    <div class="slogan">
+                                        <p>“A mental illness is not caused by personal weakness and is not “cured” by personal 
+                                            strength. Seeking and accepting help is a sign of strength.”
+                                        </p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Psychiatry is one of the neglected fields in our country where even today we are fighting 
+                                            to establish psychiatric illnesses as medical disorders in true sense. A mental illness 
+                                            is not a character flaw. It is caused by genetic, biological, social and environmental 
+                                            factors. According to a report from the World Health Organization (WHO) one in four 
+                                            people around the world suffer from mental health problems at some point in their lives. 
+                                            With appropriate treatment and support, people with mental illness can have normal life 
+                                            and live successfully in their community. It is high time we took these illnesses seriously.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-content general">
+                                    <div class="image">
+                                        <img src="./images/dr.pawan.png" alt="">
+                                        <span class="curve"></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="desc">
+                                            <h4>DR. PAWAN SHARMA, M.D, AIIMS (NEW DELHI)</h4>
+                                            <div class="info">
+                                                <p>Medical Director, Arogin Healthcare &amp; Research Center</p>
+                                                <p>Consultant Psychiatrist, Arogin Mind Clinic</p>
+                                                <p>Lecturer, Patan Academy of Health Sciences</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <div class="desc">
-                                <h4>DR. PAWAN SHARMA, M.D, AIIMS (NEW DELHI)</h4>
-                                <div class="info">
-                                    <p>Medical Director, Arogin Healthcare &amp; Research Center</p>
-                                    <p>Consultant Psychiatrist, Arogin Mind Clinic</p>
-                                    <p>Lecturer, Patan Academy of Health Sciences</p>
-                                    <p></p>
+                        <div id="tab-5" class="tab-pane">
+                            <div class="main-content">
+                                <div class="left-content">
+                                    <div class="title">
+                                        <h4>Ped</h4>
+                                    </div>
+                                    <div class="slogan">
+                                        <p>“A mental illness is not caused by personal weakness and is not “cured” by personal 
+                                            strength. Seeking and accepting help is a sign of strength.”
+                                        </p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Psychiatry is one of the neglected fields in our country where even today we are fighting 
+                                            to establish psychiatric illnesses as medical disorders in true sense. A mental illness 
+                                            is not a character flaw. It is caused by genetic, biological, social and environmental 
+                                            factors. According to a report from the World Health Organization (WHO) one in four 
+                                            people around the world suffer from mental health problems at some point in their lives. 
+                                            With appropriate treatment and support, people with mental illness can have normal life 
+                                            and live successfully in their community. It is high time we took these illnesses seriously.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-content general">
+                                    <div class="image">
+                                        <img src="./images/dr.pawan.png" alt="">
+                                        <span class="curve"></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="desc">
+                                            <h4>DR. PAWAN SHARMA, M.D, AIIMS (NEW DELHI)</h4>
+                                            <div class="info">
+                                                <p>Medical Director, Arogin Healthcare &amp; Research Center</p>
+                                                <p>Consultant Psychiatrist, Arogin Mind Clinic</p>
+                                                <p>Lecturer, Patan Academy of Health Sciences</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-6" class="tab-pane">
+                            <div class="main-content">
+                                <div class="left-content">
+                                    <div class="title">
+                                        <h4>Travel</h4>
+                                    </div>
+                                    <div class="slogan">
+                                        <p>“A mental illness is not caused by personal weakness and is not “cured” by personal 
+                                            strength. Seeking and accepting help is a sign of strength.”
+                                        </p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Psychiatry is one of the neglected fields in our country where even today we are fighting 
+                                            to establish psychiatric illnesses as medical disorders in true sense. A mental illness 
+                                            is not a character flaw. It is caused by genetic, biological, social and environmental 
+                                            factors. According to a report from the World Health Organization (WHO) one in four 
+                                            people around the world suffer from mental health problems at some point in their lives. 
+                                            With appropriate treatment and support, people with mental illness can have normal life 
+                                            and live successfully in their community. It is high time we took these illnesses seriously.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-content general">
+                                    <div class="image">
+                                        <img src="./images/dr.pawan.png" alt="">
+                                        <span class="curve"></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="desc">
+                                            <h4>DR. PAWAN SHARMA, M.D, AIIMS (NEW DELHI)</h4>
+                                            <div class="info">
+                                                <p>Medical Director, Arogin Healthcare &amp; Research Center</p>
+                                                <p>Consultant Psychiatrist, Arogin Mind Clinic</p>
+                                                <p>Lecturer, Patan Academy of Health Sciences</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-7" class="tab-pane">
+                            <div class="main-content">
+                                <div class="left-content">
+                                    <div class="title">
+                                        <h4>Headache</h4>
+                                    </div>
+                                    <div class="slogan">
+                                        <p>“A mental illness is not caused by personal weakness and is not “cured” by personal 
+                                            strength. Seeking and accepting help is a sign of strength.”
+                                        </p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Psychiatry is one of the neglected fields in our country where even today we are fighting 
+                                            to establish psychiatric illnesses as medical disorders in true sense. A mental illness 
+                                            is not a character flaw. It is caused by genetic, biological, social and environmental 
+                                            factors. According to a report from the World Health Organization (WHO) one in four 
+                                            people around the world suffer from mental health problems at some point in their lives. 
+                                            With appropriate treatment and support, people with mental illness can have normal life 
+                                            and live successfully in their community. It is high time we took these illnesses seriously.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-content general">
+                                    <div class="image">
+                                        <img src="./images/dr.pawan.png" alt="">
+                                        <span class="curve"></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="desc">
+                                            <h4>DR. PAWAN SHARMA, M.D, AIIMS (NEW DELHI)</h4>
+                                            <div class="info">
+                                                <p>Medical Director, Arogin Healthcare &amp; Research Center</p>
+                                                <p>Consultant Psychiatrist, Arogin Mind Clinic</p>
+                                                <p>Lecturer, Patan Academy of Health Sciences</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +578,7 @@
                     <h3>Contact Address</h3>
                     <ul class="info">
                         <li><ion-icon name="location"></ion-icon>Arogin Health Care & Research Centre (P) Ltd Bishalnagar, Kathmandu</li>
-                        <li><ion-icon name="call"></ion-icon>(977) 1 4423423 (Hunting line)</li>
+                        <li><ion-icon name="call"></ion-icon><a href="tel:+977-1-4423423">(977) 1 4423423 (Hunting line)</a></li>
                         <li><ion-icon name="mail"></ion-icon><a href="mailto:info@aroginhealthcare.com">info@aroginhealthcare.com</a> 
                             &ensp; | &ensp; 
                             <ion-icon name="globe"></ion-icon><a href="https://www.aroginhealthcare.com/"> www.aroginhealthcare.com</a>
