@@ -54,7 +54,7 @@ owl.owlCarousel({
 });
 
 owl.on('changed.owl.carousel', function(e) {
-    gsap.from(".banner .item .banner-image img.upper", { 
+    gsap.from(".banner .item .banner-content .upper", { 
         autoAlpha: 0,
         stagger: 0.2,
         duration: 0.8,
@@ -62,7 +62,7 @@ owl.on('changed.owl.carousel', function(e) {
 });
 
 owl.on('changed.owl.carousel', function(e) {
-    gsap.from(".banner .item .banner-image img.lower", { 
+    gsap.from(".banner .item .banner-content .lower", { 
         opacity:0,
         delay: 1,
         duration: 0.6,   

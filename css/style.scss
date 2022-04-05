@@ -179,6 +179,11 @@ $green: #8ec641;
                 font-size: 14px;
                 font-weight: 500;
                 color: #6e6e6e;
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }
@@ -201,6 +206,37 @@ $green: #8ec641;
                 
                 border: 1px solid #60d1d8;
             }
+        }
+    }
+}
+
+
+.heading{
+    margin-bottom: 32px;
+    h2{
+        padding: 10px 30px 10px 15px;
+        background: #202e31;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-family: "Raleway", sans-serif;
+        color: #fff;
+        width: 536px;
+        position: relative;
+        &.non{
+            width: 144px;
+        }
+        span{
+            color: #60d1d8;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 0px;
+            width: 20px;
+            height: 100%;
+            background: #202e31;
+            transform: skewX(-15deg);
         }
     }
 }
@@ -289,10 +325,11 @@ header{
                                     color: #fff;
                                     font-weight: 400;
                                     transition: all .6s ease;
+                                    display: block;
                                 }
                                 &:hover{
                                     a{
-                                        padding-left: 8px;
+                                        padding-left: 12px;
                                     }
                                 }
                             }
@@ -330,21 +367,13 @@ header{
     .banner-slider{
         .item{
             position: relative;
-            .banner-image{
-                img{
-                    position: absolute;
-                    left: 58%;
-                    max-width: 500px; 
-                    max-height: auto;
-                    object-fit: contain;
-                    &:nth-child(2n){
-                        left: 59%;
-                    }
-                }
+            .banner-content{
+                position: absolute;
+                left: 58%;
+                top: 40%;
+                max-width: 500px; 
                 &.shift{
-                    img{
-                        left: 12%;
-                    }
+                    left: 12%;
                 }
             }
         }
@@ -355,7 +384,7 @@ header{
             }
             button{ 
                 position: absolute;
-                bottom: 282px;
+                bottom: 270px;
                 &::after{
                     font-size: 32px;
                     padding: 32px 6px;
@@ -562,35 +591,6 @@ header{
 
 .services{
     padding: 50px 0;
-    .heading{
-        margin-bottom: 32px;
-        h2{
-            padding: 10px 30px 10px 15px;
-            background: #202e31;
-            text-transform: uppercase;
-            font-weight: 800;
-            font-family: "Raleway", sans-serif;
-            color: #fff;
-            width: 536px;
-            position: relative;
-            &.non{
-                width: 144px;
-            }
-            span{
-                color: #60d1d8;
-            }
-            &::after{
-                content: '';
-                position: absolute;
-                right: -10px;
-                top: 0px;
-                width: 20px;
-                height: 100%;
-                background: #202e31;
-                transform: skewX(-15deg);
-            }
-        }
-    }
     .general-section{
         display: flex;
         .left-side-bar{
@@ -747,7 +747,7 @@ footer{
         }
         h3{
             font-size: 20px;
-            margin-bottom: 20px;
+            margin: 20px 0;
             color: #0c1f34;
             font-weight: 600;
             transition: all 0.2s ease;
