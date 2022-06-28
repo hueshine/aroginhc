@@ -10,8 +10,6 @@ $(window).on('scroll', function() {
     }
 });
 
-
-
 // $(document).ready(function() {
 //       setTimeout(function() {
 //           $('.banner-timer').addClass('load');
@@ -25,7 +23,23 @@ $(document).ready(function(){
   });
 });
 
+const menuBtn = document.querySelector('.mobile-nav');
+if(menuBtn) {
+    
+const navBox = document.querySelector('.navigation')
+let closeBtn = document.querySelector(".close-btn");
+menuBtn.addEventListener('click',(e) => {
+    console.log("clicked")
+    navBox.classList.toggle("open")
+})
 
+if(closeBtn) {
+    closeBtn.addEventListener('click',(e) => {
+        e.preventDefault();
+        navBox.classList.remove("open")
+    })
+}
+}
 
 var owl = $('.banner-slider');
 
@@ -33,7 +47,8 @@ owl.owlCarousel({
     loop: true,
     margin: 0,
     nav: true,
-    autoplay: true,
+    navText: ["<i class='fas fa-chevron-left  ' id='left'></i>", "<i class='fas fa-chevron-right  ' id='right'></i>" ],
+    autoplay: false,
     dots: true,
     duration: 6,
     animateOut: 'fadeOut',

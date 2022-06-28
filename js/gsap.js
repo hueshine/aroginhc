@@ -54,9 +54,9 @@ gsap.from(".general-section", {
 gsap.from(".footer-section", { 
     scrollTrigger: { 
         trigger: "footer", 
-        start: 'top center', 
+        start: 'top center+=24%', 
         end: 'bottom bottom', 
-        
+        // markers: true,
     } ,
     opacity: 0,
     duration: 1,

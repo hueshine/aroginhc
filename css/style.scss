@@ -252,6 +252,7 @@ header{
                 a{
                     font-size: 12px;
                     font-weight: 400;
+                    text-transform: uppercase;
                     color: #fff;
                 }
             }
@@ -260,12 +261,6 @@ header{
                 justify-content: space-around;
             }
             .header-upper-left{
-                ion-icon{
-                    padding-right: 8px;
-                }
-            }
-            .header-upper-right{
-                text-transform: uppercase;
                 li{
                     position: relative;
                     padding: 3px 10px;
@@ -282,6 +277,10 @@ header{
                     }
                 }
             }
+            .header-upper-right{
+                text-transform: uppercase;
+                
+            }
         }
     }
     .header-lower{
@@ -297,13 +296,12 @@ header{
                     display: flex;
                     .menu-item{
                         margin-left: 6px;
-                        
                         position: relative;
                         a{
                             font-size: 12px;
                             font-weight: 700;
                             text-transform: uppercase;
-                            padding: 8px;
+                            padding: 4px;
                             color: #393939;
                         }
                         .sub-menu{
@@ -316,9 +314,10 @@ header{
                             opacity: 0;
                             visibility: hidden;
                             z-index: 1;
+                            transition: 0.8s all ease;
 
                             li{
-                                padding: 7px 20px;
+                                padding: 4px 10px;
                                 border-bottom: 1px solid #ffffffc3;
                                 a{
                                     text-transform: capitalize;
@@ -329,7 +328,29 @@ header{
                                 }
                                 &:hover{
                                     a{
-                                        padding-left: 12px;
+                                        padding-left: 14px;
+                                    }
+                                }
+                            }
+                            .rep-menu-item{
+                                position: relative;
+                                .rep-sub-menu{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 100%;
+                                    background-color: #22ad4b;
+                                    width: 200px;
+                                    transition: all .6s ease;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    z-index: 1;
+                                    transition: 0.8s all ease;
+                                    li{
+                                        &:hover{
+                                            a{
+                                                padding-left: 8px;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -343,6 +364,15 @@ header{
                                 opacity: 1;
                                 visibility: visible;
                                 transform: translateY(-10px);
+                                .rep-menu-item{
+                                    &:hover{
+                                        .rep-sub-menu{
+                                            opacity: 1;
+                                            visibility: visible;
+                                            transform: translateY(-10px);
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -358,6 +388,7 @@ header{
             position: fixed;
             width: 100%;
             background-color: #fff;
+            border-bottom: 1px solid #505050;
         }
     }
 }
@@ -372,6 +403,23 @@ header{
                 left: 58%;
                 top: 40%;
                 max-width: 500px; 
+                color: #393939;
+                h2{
+                    font-size: 24px;
+                    margin-bottom: 14px;
+                    font-weight: 500;
+                    font-family: 'Raleway';
+                }
+                h1{
+                    font-size: 48px;
+                    line-height: 56px;
+                    margin-bottom: 32px;
+                    font-weight: 600;
+                    font-family: 'Sintony';
+                }
+                p{
+                    font-size: 16px;
+                }
                 &.shift{
                     left: 12%;
                 }
@@ -385,11 +433,11 @@ header{
             button{ 
                 position: absolute;
                 bottom: 270px;
-                &::after{
-                    font-size: 32px;
-                    padding: 32px 6px;
+                i{
+                    font-size: 24px;
+                    font-weight: 600;
+                    padding: 40px 8px;
                     width: 30px;
-                    height: 110px;
                     color: #fff;
                     background: #2c2b2b;
                     opacity: 0;
@@ -399,17 +447,9 @@ header{
             }
             .owl-prev{
                 left: 0;
-                &::after {
-                    content: '<';
-                    left: 0px;
-                }
             }
             .owl-next{
                 right: 0;
-                &::after {
-                    content: '>';
-                    font-size: 32px;
-                }
             }
         }
         .owl-dots{
@@ -443,12 +483,9 @@ header{
     }
     &:hover{
         .banner-slider{
-            .owl-nav{
-                .owl-next::after, .owl-prev::after{
-                    opacity: 0.3;
+            button i{
+                opacity: 0.4;
                     visibility: visible;
-                }
-    
             }
             .owl-dots{
                 opacity: 1;
@@ -542,19 +579,17 @@ header{
     
 }
 
-
 .we-are-best{
     overflow: hidden;
     position: relative;
     &::after {
         content: '';
         position: absolute;
-        right: 0px;
+        right: -5%;
         top: 0px;
         width: 53%;
         height: 100%;
         background: #202e31;
-        right: -5%;
         z-index: -1;
         transform: skewX(-15deg);
         overflow-x: hidden;
@@ -595,6 +630,7 @@ header{
         display: flex;
         .left-side-bar{
             width: 22%;
+            height: fit-content;
             border: 1px solid #f1f1f1;
             border-bottom: none;
             margin-bottom: 20px;
@@ -785,57 +821,60 @@ footer{
     }
 }
 
-.candidate{
-    box-shadow: inner 0 0 2px #d3d3d3;
-    border: 1px solid #d3d3d3;
-    border-radius: 2px;
-    margin-bottom: 35px;
-    width: 240px;
-    img{
-        width: 100%;
-    }
-    .info{
-        padding: 15px;
-        .desc{
+.gallery{
+    padding: 50px 0;
+    .candidate{
+        box-shadow: inner 0 0 2px #d3d3d3;
+        border: 1px solid #d3d3d3;
+        border-radius: 2px;
+        margin-bottom: 35px;
+        // width: 240px;
+        img{
+            width: 100%;
+        }
+        .info{
             padding: 15px;
-        }
-        .details{
-            padding-left: 15px;
-            border-left: 5px solid #60d1d8;
-            font-weight: bold;
-            margin-bottom: 15px;
-            a{
-                font-family: 'Raleway', sans-serif;
-                color: #60d1d8;
-                font-size: 14px;
-                text-transform: uppercase;
+            .desc{
+                padding: 15px;
             }
-            h6{
-                margin-top: 3px;
-                color: #cacaca;
-                color: #22ad4b;
-                font-size: 12px;
-                font-weight: 400;
-                font-family: 'Sintony';
-                line-height: 14px;
-                margin-bottom: 5px;
-                width: 171px;
+            .details{
+                padding-left: 15px;
+                border-left: 5px solid #60d1d8;
+                font-weight: bold;
+                margin-bottom: 15px;
+                a{
+                    font-family: 'Raleway', sans-serif;
+                    color: #60d1d8;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+                h6{
+                    margin-top: 3px;
+                    color: #cacaca;
+                    color: #22ad4b;
+                    font-size: 12px;
+                    font-weight: 400;
+                    font-family: 'Sintony';
+                    line-height: 14px;
+                    margin-bottom: 5px;
+                    width: 171px;
+                }
             }
-        }
-        .link{
-            a{
-                font-size: 12px;
-                &.hover-bounce{
-                    &::before{
-                        background: #2098d1;
+            .link{
+                a{
+                    font-size: 12px;
+                    &.hover-bounce{
+                        &::before{
+                            background: #2098d1;
+                        }
                     }
                 }
             }
         }
-    }
-    &:hover{
-        box-shadow: inner 0 0 12px #d3d3d3;
-        border: 1px solid #fff;
+        &:hover{
+            box-shadow: inner 0 0 12px #d3d3d3;
+            border: 1px solid #fff;
+        }
     }
 }
 
